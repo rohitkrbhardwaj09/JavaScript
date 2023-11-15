@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>JS - RegEx</title>
+</head>
+
+<body>
+    <!-- ----------------------------------header-------------------------------------------- -->
+    <div class="container-fluid bg-danger bg-gradient p-4 text-center">
+        <h2 class="text-light mx-auto">JavaScript : RegEx</h2>
+    </div>
+
+    <!-- ----------------------------------body-------------------------------------------- -->
+    <div class="container p-3 bg-light" style="text-align: justify;">
+        <h3 class="text-center fw-bolder">Regular Expression in JavaScript</h3>
+        <p>
+            A Regular Expression is a sequaence of character that forms a seach pattern. The search pattern can be used
+            for text search and text replace operations.
+            <br>
+            A Reguar Expression can be a single character or a more complicated pattern. Regular Expression can be used
+            to perform all types of text search and text replacement operations.
+        </p>
+
+        <h6>Syntax: </h6>
+        <div class="fst-italic bg-white p-3">
+            /pattern/modifier
+        </div>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example:</h6>
+            <span class="text-success"></span>
+            let pattern = /rohitbhardwaj9/i;
+            <h6 class="text-danger ms-3 fw-bold">Explanation:</h6>
+            <p style="margin-left: 90px;"><i>rohitbhardwaj9</i> is a regular expression. <br>rohitbhardwaj9 is the pattern (to be used in a search). <br>i is a modifier (modifies the seach to be Case-Insensitive) </p>
+        </pre>
+
+        <h5>Regular Expression Modifiers : </h5><span> can be used to perform multiline searches which can also be set
+            to Case-Insensitive matching.</span>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-2">Expression</th>
+                    <th class="col-10">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><a href="#g">g</a></td>
+                    <td>Find the character globally</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#i">i</a></td>
+                    <td>Find a character with Case-Insensitive matching</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#m">m</a></td>
+                    <td>Find multiple matching</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5>Regular Expression Brackets : </h5><span> can be Find characters in a specified range</span>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-2">Expression</th>
+                    <th class="col-10">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><a href="#[abc]">[abc]</a></td>
+                    <td>Find any of the characters inside the brackets</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#[^abc]">[^abc]</a></td>
+                    <td>Find any character, not inside the brackets</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#[0-9]">[0-9]</a></td>
+                    <td>Find any of the digits between the brackets 0 to 9</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#[^0-9]">[^0-9]</a></td>
+                    <td>Find any digit not in between the brackets</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#(x|y)">(x|y)</a></td>
+                    <td>Find any of the alternatives between x or y separated with |</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h5>Regular Expression Metacharacters : </h5><span>are characters with a special meaning:</span>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-2">Expression</th>
+                    <th class="col-10">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><a href="#\.">\.</a></td>
+                    <td>Search single characters, except line terminator or newline.</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\w">\w</a></td>
+                    <td>Find the word character i.e. characters from a to z, A to Z, 0 to 9</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\d">\d</a></td>
+                    <td>Find a digit</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\D">\D</a></td>
+                    <td>Search non-digit characters i.e all the characters except digits</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\s">\s</a></td>
+                    <td>Find a whitespace character</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\S">\S</a></td>
+                    <td>Find the non-whitespace characters.</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\b">\b</a></td>
+                    <td>Find a match at the beginning or at the end of a word</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\B">\B</a></td>
+                    <td>Find a match that is not present at the beginning or end of a word.</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\0">\0</a></td>
+                    <td>Find the NULL character.</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\n">\n</a></td>
+                    <td>Find the newline character.</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\f">\f</a></td>
+                    <td>Find the form feed character</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\r">\r</a></td>
+                    <td>Find the carriage return character</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\t">\t</a></td>
+                    <td>Find the tab character</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\v">\v</a></td>
+                    <td>Find the vertical tab character</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#\uxxxx">\uxxxx</a></td>
+                    <td>Find the Unicode character specified by the hexadecimal number xxxxx</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5>Regular Expression Metacharacters : </h5><span>are used to define quantitiesoccurrence</span>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-2">Expression</th>
+                    <th class="col-10">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><a href="#n+">n+</a></td>
+                    <td>Match any string that contains at least one n</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#n*">n*</a></td>
+                    <td>Match any string that contains zero or more occurrences of n</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#n?">n?</a></td>
+                    <td>Match any string that contains zero or one occurrence of n</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#m{X}">m{X}</a></td>
+                    <td>Find the match of any string that contains a sequence of m, X times</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#m{X,Y}">m{X, Y}</a></td>
+                    <td>Find the match of any string that contains a sequence of m, X to Y times</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#m{X,}">m{X,}</a></td>
+                    <td>Find the match of any string that contains a sequence of m, at least X times</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#m$">m$</a></td>
+                    <td>Find the match of any string which contains m at the end of it</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#^m">^m</a></td>
+                    <td>Find the match of any string which contains m at the beginning of it</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#?!m">?!m</a></td>
+                    <td>Find the match of any string which is not followed by a specific string m.</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h5>Regular Expression Object Properties: </h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-2">Expression</th>
+                    <th class="col-10">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><a href="#constructor">constructor</a></td>
+                    <td>Return the function that created the RegExp object’s prototype</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#global">global</a></td>
+                    <td>Specify whether the “g” modifier is set or not</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#ignorecase">ignorecase</a></td>
+                    <td>Specify whether the “i” modifier is set or not</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#lastindex">lastindex</a></td>
+                    <td>Specify the index at which to start the next match</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#multiline">multiline</a></td>
+                    <td>Specify whether the “m” modifier is set or not</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#source">source</a></td>
+                    <td>Return the text of RegExp pattern</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h5>Regular Expression Object Methods: </h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-2">Expression</th>
+                    <th class="col-10">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><a href="#compile">compile()</a></td>
+                    <td>Used to compile the regular expression while executing of script</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#exec">exec()</a></td>
+                    <td>Used to test for the match in a string.</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#test">test()</a></td>
+                    <td>Used to test for a match in a string</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><a href="#toString">toString()</a></td>
+                    <td>Return the string value of the regular expression</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h5 style="margin-top: 40px;">Below is an example of the JavaScript Regular Expressions. </h5>
+        <div class="alert alert-info" role="alert">
+            <h6>Note:</h6>
+            <p>
+                In JavaScript, regular expressions are often used with the two string methods: <b>search()</b> and <b>replace()</b>.
+                <ul>
+                    <li>The <b>search()</b> method uses an expression to search for a match and returns the position of the match.</li>
+                    <li>The <b>replace()</b> method returns a modified string where the pattern is replaced.</li>
+                </ul>
+            </p>
+        </div>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold"><b>#</b> Use a regular expression to do a search, string exist or not </h6>
+            <h6 class="text-success ms-3 fw-bold">Example:</h6>
+            <span class="text-success"></span>
+            function searchInString(){
+                let str = "My name is Rohit Bhardwaj and My email id is rohitkrbhardwaj09@gmail.com";
+                let n = str.search(/rohitkrbhardwaj09/);
+                console.log(n);
+            }
+            
+            searchInString();
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            45    
+        </pre>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold"><b>#</b> Use a regular expression to do a case-insensitive search <span class="text-danger">(if string exist)</span></h6>
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            <span class="text-success"></span>
+            function searchInString() {
+                let str = "My name is Rohit Bhardwaj and My email id is rohitkrbhardwaj09@gmail.com";
+                let n = str.search(/rohit bhardwaj/i);
+                console.log(n);
+            }
+            
+            searchInString();
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            11    
+        </pre>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold"><b>#</b> Use a regular expression to do a case-insensitive search <span class="text-danger">(if string doesn't exist)</span></h6>
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            <span class="text-success"></span>
+            function searchInString() {
+                let str = "My name is Rohit Bhardwaj and My email id is rohitkrbhardwaj09@gmail.com";
+                let n = str.search(/rohit kumar bhardwaj/i);
+                console.log(n);
+            }
+            
+            searchInString();
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            -1
+        </pre>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold"><b>#</b> Use a case insensitive regular expression to replace one email id with another in the string. <span class="text-danger">(Case insensitive)</span></h6>
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            <span class="text-success"></span>
+            function replaceInString(){
+                let str = "My name is Rohit Bhardwaj and My email id is rohitkrbhardwaj09@gmail.com";
+                let n = str.replace(/rohitkrBhardwaj09/i, "me.rohitbhardwaj9");
+                console.log(n);
+            }
+            
+            replaceInString();
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            My name is Rohit Bhardwaj and My email id is me.rohitbhardwaj9@gmail.com
+        </pre>
+    </div>
+
+    <!-- ----------------------------------Footer-------------------------------------------- -->
+
+    <div class="container-fluid bg-dark text-light text-center">
+        <p>me.rohitbhardwaj9@gmail.com</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

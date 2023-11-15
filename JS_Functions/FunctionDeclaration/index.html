@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>JS - Function Declaration</title>
+</head>
+
+<body>
+    <!-- ----------------------------------header-------------------------------------------- -->
+    <div class="container-fluid bg-danger bg-gradient p-4 text-center">
+        <h2 class="text-light mx-auto">JavaScript : Function Declaration</h2>
+    </div>
+
+    <!-- ----------------------------------body-------------------------------------------- -->
+    <div class="container p-3 bg-light" style="text-align: justify;">
+        <h3 class="text-center fw-bolder">Function Declaration</h3>
+        <p>A function is a set of statements that take inputs, do some specific computation, and produce output. The idea is to put some commonly or repeatedly done tasks together and make a function so that instead of writing the same code again and again for different inputs, we can call that function. </p>
+        
+        <!-- //method: 1 -->
+        <h6>Syntax for Function Declaration: </h6>
+        <p class="fst-italic bg-white p-3">function functionName(x, y) { statements... return (z) };</p>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example:</h6>
+            <span class="text-success">//example : using function declaration</span>
+            const a= 12;
+            const b= 4;
+            sum(a, b);
+
+            const c= 2;
+            const d= 24;
+            sum(c, d);
+
+            const e= 5;
+            const f= 14;
+            sum(e, f);
+
+            function sum(num1, num2){
+                const result = num1 + num2;
+                console.log("the sum is:", result);
+            }
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            9
+        </pre>
+
+    </div>
+<!-- ----------------------------------Footer-------------------------------------------- -->
+
+    <div class="container-fluid bg-dark text-light text-center">
+        <p>me.rohitbhardwaj9@gmail.com</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

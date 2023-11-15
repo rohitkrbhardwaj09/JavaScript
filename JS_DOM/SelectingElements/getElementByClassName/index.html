@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM : getElementByClassName</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li class="item">HTML</li>
+                <li class="item">CSS</li>
+                <li class="item highlight">JavaScript</li>
+                <li class="item">JQuery</li>
+                <li class="item">AJAX</li>
+            </ul>
+        </nav>
+
+        <h1>
+            getElementByClassName Demo
+        </h1>
+
+    </header>
+    <section>
+        <article>
+            <h2 class="secondary">Example 1</h2>
+        </article>
+        <article>
+            <h2 class="secondary">Example 2</h2>
+        </article>
+    </section>
+
+    <script>
+        // 1) Calling JavaScript getElementsByClassName() on an element example
+        let menu = document.getElementById('menu');
+        let items = menu.getElementsByClassName("item");
+
+        let data = [].map.call(items, item => item.textContent);
+        document.write(data);
+        console.log(data);
+
+        // 2) Calling JavaScript getElementsByClassName() on the document example
+        let element = document.getElementsByClassName("secondary");
+
+        let data2 = [].map.call(element, elem => elem.textContent);
+        document.write(data2);
+        console.log(data2);
+    </script>
+</body>
+</html>

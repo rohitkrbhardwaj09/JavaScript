@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>JS - Function Declaration</title>
+</head>
+
+<body>
+    <!-- ----------------------------------header-------------------------------------------- -->
+    <div class="container-fluid bg-danger bg-gradient p-4 text-center">
+        <h2 class="text-light mx-auto">JavaScript : Nested Function</h2>
+    </div>
+
+    <!-- ----------------------------------body-------------------------------------------- -->
+    <div class="container p-3 bg-light" style="text-align: justify;">
+        <h3 class="text-center fw-bolder">Nested Function</h3>
+        <p>Functions within another function are called “Nested function.” A function can have one or more inner
+            functions. These nested functions (inner functions) are under the outer functions’ scope. In Javascript
+            Nested Functions, the outer function can be called the Parent function, and the inner function can be called
+            the Child function. The child function can access the variables and parameters of the Parent function.</p>
+        <h4 class="">Approach</h4>
+        <ol>
+            <li>Write one function inside another function. (square fn inside addSquare fn)</li>
+            <li>Make a call to the inner function in the return statement of the outer function.</li>
+            <li>Call it addSquare(val1, val2), where a=3 and b=4 is the parameter to the outer function.</li>
+            <li>Finally, return the combined output from the nested function.</li>
+        </ol>
+        <!-- //method: 1 -->
+        <h6>Syntax for Function Declaration: </h6>
+        <pre class="fst-italic bg-white p-3">
+            function parent_name ( param1, param2 ){
+                function child_name ( param3, param4 ){
+                   statements; <span class="text-success">//body of the child function</span>
+                }
+                statements; <span class="text-success">//body of the parent function</span>
+                child_name() <span class="text-success">//calling of child function</span>
+             }
+             parent_name() <span class="text-success">//calling of parent function</span>
+            </pre>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example:</h6>
+            <span class="text-success">//example : using function declaration</span>
+            function addSquare(val1, val2) {
+
+                const squareOfVal1 = square(val1);
+                const squareOfVal2 = square(val2);
+            
+                function square(num) {
+                    return num * num;
+                }
+            
+                return squareOfVal1 + squareOfVal2;
+            }
+            
+            console.log(addSquare(4, 3)); 
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            25
+        </pre>
+
+    </div>
+    <!-- ----------------------------------Footer-------------------------------------------- -->
+
+    <div class="container-fluid bg-dark text-light text-center">
+        <p>me.rohitbhardwaj9@gmail.com</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

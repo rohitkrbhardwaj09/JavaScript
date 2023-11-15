@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM : QuerySelector</title>
+    <style>
+        /* //Universal Selector */
+        /* *{
+            margin: 0px;
+            padding: 0px;
+        } */
+        /* body{
+            background-color: rgb(58, 89, 119);
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 15%;
+            margin-right: 15%;
+            text-align: justify;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+        }
+        nav{
+            /* display: flex; */
+            
+        /* }
+        nav ul{
+            display: flex;
+            justify-items: center;
+            
+        }
+        nav ul li{
+            list-style-type: none;
+            justify-items: center;
+            margin: auto;
+            padding: 20px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-weight: 800;
+            /* color: aliceblue; */
+      /*  }
+        main h1{
+            padding: 50px 0;
+            text-align: center;
+        }
+        div section{
+            padding: 20px 0;
+        }
+        div section h2{
+            padding: 10px 0px;
+        }
+        div section p{
+            padding: 10px 0;
+        }
+        div section button{
+            padding: 10px 15px;
+            border-radius: 7px;
+            border: 2px solid cyan;
+        }
+        div section button:hover{
+            background-color: brown;
+            color: azure;
+        }  */
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/logo.png" alt="Logo" id="logoImg" height="60px" width="60px">
+        </div>
+        <nav class="primary-nav">
+            <ul>
+                <li class="menu-item current"><a href="Home">Home</a></li>
+                <li class="menu-item"><a href="Services">Services</a></li>
+                <li class="menu-item"><a href="About">About</a></li>
+                <li class="menu-item"><a href="Contact">Contact</a></li>
+                <li class="menu-item"><a href="Portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            Welcome to the JS DOM
+        </h1>
+
+        <div class="container">
+            <section class="section-a">
+                <h2>UI/UX</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, accusamus eos. Inventore debitis ex excepturi quasi, eos nemo officia veniam repellat sunt sint placeat beatae nulla tempora molestiae ad quas. Repellat velit, laborum quia praesentium consequatur eaque! Cum, sequi voluptate commodi, temporibus quisquam aperiam quibusdam maxime placeat earum facilis omnis?</p>
+                <button>Read more</button>
+            </section>
+            <section class="section-b">
+                <h2>PWA Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, accusamus eos. Inventore debitis ex excepturi quasi, eos nemo officia veniam repellat sunt sint placeat beatae nulla tempora molestiae ad quas. Repellat velit, laborum quia praesentium consequatur eaque! Cum, sequi voluptate commodi, temporibus quisquam aperiam quibusdam maxime placeat earum facilis omnis?</p>
+                <button>Read more</button>
+            </section>
+            <section class="section-c">
+                <h2>Mobile App Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, accusamus eos. Inventore debitis ex excepturi quasi, eos nemo officia veniam repellat sunt sint placeat beatae nulla tempora molestiae ad quas. Repellat velit, laborum quia praesentium consequatur eaque! Cum, sequi voluptate commodi, temporibus quisquam aperiam quibusdam maxime placeat earum facilis omnis?</p>
+                <button>Read more</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

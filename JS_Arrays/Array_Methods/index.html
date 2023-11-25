@@ -35,15 +35,15 @@
                 </tr>
             </thead>
             <tr>
-                <td><a href="#">at()</a></td>
+                <td><a href="#at()">at()</a></td>
                 <td>Returns an indexed element of an array</td>
             </tr>
             <tr>
-                <td><a href="#">concat()</a></td>
+                <td><a href="#concat()">concat()</a></td>
                 <td>Joins arrays and returns an array with the joined arrays</td>
             </tr>
             <tr>
-                <td><a href="#">constructor</a></td>
+                <td><a href="#constructor">constructor</a></td>
                 <td>Returns the function that created the Array object's prototype</td>
             </tr>
             <tr>
@@ -193,7 +193,53 @@
         </table>
 
 
+        <h5 id="at()">The at() method</h5>
+        <p>
+            The at() method returns an indexed element from an array.
+        </p>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example:</h6>
+            <span class="text-success">//Trying to get element from 2nd indexed from the fruit named array</span>
+            const fruit = ["Apple", "Banana", "Cherry"];
+            console.log(fruit.at(2));
 
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            Cherry
+        </pre>
+
+        <h5 id="concat()">JavaScript Array concat() method</h5>
+        <p>
+            The concat() method concatenates (joins) two or more arrays:
+        </p>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example:</h6>
+            <span class="text-success">//Concatanating arr1 with arr2</span>
+            const arr1 = ["One", "Two", "Three", "Four"];
+            const arr2 = ["Five", "Six", "Seven"];
+
+            const result = arr1.concat(arr2);
+            console.log(result);
+
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            (7) <i>["One", "Two", "Three", "Four", "Five", "Six", "Seven"]</i>
+        </pre>
+        <h5 id="constructor">JavaScript Array constructor() method</h5>
+        <p>
+            The constructor property returns the function that created the Array prototype.
+
+            For JavaScript arrays the constructor property returns:
+
+            <br>
+            <b>function Array() { [native code] }</b>
+        </p>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example:</h6>
+            <span class="text-success"></span>
+            const fruit = ["Apple", "Banana", "Cherry"];
+            console.log(fruit.constructor);
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            <i>f Array() { [native code] }</i>
+        </pre>
     </div>
     <!-- ----------------------------------Footer-------------------------------------------- -->
 

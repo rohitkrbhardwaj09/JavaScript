@@ -17,6 +17,15 @@
 
     <!-- ----------------------------------body-------------------------------------------- -->
     <div class="container p-3 bg-light" style="text-align: justify;">
+            <nav aria-label="...">
+                <ul class="pagination pagination-lg justify-content-end">
+                  <li class="page-item" aria-current="page">
+                    <a href="" class="page-link text-light bg-dark">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link bg-dark text-light" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link bg-dark text-light" href="#">3</a></li>
+                </ul>
+              </nav>
         <h3 class="text-center fw-bolder">Regular Expression in JavaScript</h3>
         <p>
             A Regular Expression is a sequaence of character that forms a seach pattern. The search pattern can be used
@@ -50,13 +59,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="text-center"><a href="#g">g</a></td>
-                    <td>Find the character globally</td>
-                </tr>
-                <tr>
                     <td class="text-center"><a href="#i">i</a></td>
                     <td>Find a character with Case-Insensitive matching</td>
                 </tr>
+                <tr>
+                    <td class="text-center"><a href="#g">g</a></td>
+                    <td>Find the character globally</td>
+                </tr>
+                
                 <tr>
                     <td class="text-center"><a href="#m">m</a></td>
                     <td>Find multiple matching</td>
@@ -285,6 +295,8 @@
                 </tr>
             </tbody>
         </table>
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+
 
 
         <h5 style="margin-top: 40px;">Below is an example of the JavaScript Regular Expressions. </h5>
@@ -356,6 +368,437 @@
         </pre>
     </div>
 
+
+    <div class="container p-3 bg-light" style="text-align: justify;">
+        <h3 class="text-center fw-bolder">JavaScript Regular Expression</h3>
+        <p>
+            <ul>
+                <li>
+                    A Regular Expression is a String that describes a pattern e.g. email addresses and phone numbers.
+                </li>
+                <li>
+                    In JavaScript, Regular Expression are objects. JavaScript provides the built-in <i>RegEx</i> type that allow you to work with regular expressions effectively.
+                </li>
+                <li>
+                    Regular Expression are useful for searching and replacing string that match a pattern. They have many usefull applications.
+                </li>
+            </ul>
+        </p>
+        <!-- //method: 1 -->
+        <h5>Creating a Regular Expression </h5>
+        <p>To create a regular expression in JavaScript, you enclose its pattern in forward-slash characters (<i style="color: red;">/</i>) like this
+
+        <div class="alert alert-secondary" role="alert">
+            let re = /hi/;
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+            Note that a Regular Expression doesn't have single quotes or double quotes like a regular string.
+        </div>
+
+        <p>Or you can use the <i style="color: red;">RegExp</i> constructor</p>
+        <div class="alert alert-secondary" role="alert">
+            let re = new RegExp('hi');
+        </div>
+
+
+
+
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Testing for matching example: using test() method</h6>
+            <span class="text-success">//Creating a regular expression</span>
+            
+            let re = /hi/;
+            // or 
+            let re = new RegExp('hi');
+
+            let result = re.test('hi jhon');
+            console.log(result);
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            true
+        </pre>
+
+
+        <h5>Creating a Regular Expression </h5>
+        <p>To create a regular expression in JavaScript, you enclose its pattern in forward-slash characters (<i style="color: red;">/</i>) like this
+
+        <div class="alert alert-secondary" role="alert">
+            let re = /hi/;
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+            Note that a Regular Expression doesn't have single quotes or double quotes like a regular string.
+        </div>
+
+        <p>Or you can use the <i style="color: red;">RegExp</i> constructor</p>
+        <div class="alert alert-secondary" role="alert">
+            let re = new RegExp('hi');
+        </div>
+
+
+
+
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Testing for matching example: using test() method</h6>
+            <span class="text-success">//Creating a regular expression</span>
+            
+            let re = /hi/;
+            // or 
+            let re = new RegExp('hi');
+
+            let result = re.test('hi jhon');
+            console.log(result);
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            true
+        </pre>
+
+        <!-- --------------------------------------------------------------------------------------------------------------- -->
+
+        <h2 class="text-center">Using pattern flags </h2>
+        <p>
+            Besides apattern, a <span style="color: red;">RegExp</span> object also accepts an optional flag parameter. Flags are setting that change the searching behavior. Regular espression have many flags.
+        </p>
+
+        <h5>1) The ignore flag (i)</h5>
+
+        <p>
+            The <i>i</i> flag ignores cases when searching. The letter i stands for ignore.
+        </p>
+        <p>
+            By default, searches are case-sensitive. For Example <i>hi</i> only matches the string hi not <i>Hi</i>. To search for a string <i>hi</i> in any cases, you use the <i>i</i> flag:
+        </p>
+
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            let re = /hi/i;
+            let result = re.test("Hi Jhon");
+
+            console.log(result);
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            true
+        </pre>
+
+        <p>Or you can use the <i style="color: red;">RegExp</i> constructor</p>
+        <div class="alert alert-secondary" role="alert">
+            hi
+
+            <span style="color: red;">/hi/i</span> will match any string <span style="color: red;">hi</span>, <span style="color: red;">Hi</span>, and <span style="color: red;">HI</span>. <br> Notice that you place the flag <span style="color: red;">i</span> after the last forward-slash character <span style="color: red;">/</span>
+        </div>
+
+
+
+
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">The follwoing examples shows how to use the flag in the RegExp constructor: </h6>
+            <span class="text-success">//Creating a regular expression</span>
+            
+            let re = new RegExp('hi', 'i');
+            let result = re.test('HI Jhon');
+
+            console.log(result);
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            true
+        </pre>
+
+         <!-- --------------------------------------------------------------------------------------------------------------- -->
+
+        <h2 class="text-center">Using pattern flags </h2>
+        <p>
+            Besides apattern, a <span style="color: red;">RegExp</span> object also accepts an optional flag parameter. Flags are setting that change the searching behavior. Regular espression have many flags.
+        </p>
+
+        <h5 id="i">1: The ignore flag (i)</h5>
+
+        <p>
+            The <i>i</i> flag ignores cases when searching. The letter i stands for ignore.
+        </p>
+        <p>
+            By default, searches are case-sensitive. For Example <i>hi</i> only matches the string hi not <i>Hi</i>. To search for a string <i>hi</i> in any cases, you use the <i>i</i> flag:
+        </p>
+
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            let re = /hi/i;
+            let result = re.test("Hi Jhon");
+
+            console.log(result);
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            true
+        </pre>
+
+        <p>Or you can use the <i style="color: red;">RegExp</i> constructor</p>
+        <div class="alert alert-secondary" role="alert">
+            hi
+
+            <span style="color: red;">/hi/i</span> will match any string <span style="color: red;">hi</span>, <span style="color: red;">Hi</span>, and <span style="color: red;">HI</span>. <br> Notice that you place the flag <span style="color: red;">i</span> after the last forward-slash character <span style="color: red;">/</span>
+        </div>
+
+
+
+
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">The follwoing examples shows how to use the flag in the RegExp constructor: </h6>
+            <span class="text-success">//Creating a regular expression</span>
+            
+            let re = new RegExp('hi', 'i');
+            let result = re.test('HI Jhon');
+
+            console.log(result);
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            true
+        </pre>
+
+
+        <!-- --------------------------------------------------------------------------------------------------------------- -->
+        
+
+        <h5 id="g">2: The global flag (g)</h5>
+
+        <p>
+            Another commonly used flag is the global flag (g). Without the global flag, the RegExp object only checks if there is a match in a String and returns the first match.
+        </p>
+        <p>
+            When the <span class="text-danger">g</span> flag is available, the <span class="text-danger">RegExp</span> looks for all the matchs and returns all of them.
+        </p>
+        <p>
+            It's possible to combine flags e.g. <span class="text-danger">gi</span> flags combine the ignore (<span class="text-danger">i</span>) and the gloabal (<span class="text-danger">g</span>) flags
+        </p>
+        <p>
+            The <span class="text-danger">exec()</span> method returns <span class="text-danger">null</span> if it could not find any match. However, it returns a single match at once. To get all matches, you need to execute the <span class="text-danger">exec()</span> multiple times.
+        </p>
+
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">The following exapmle uses the exec() method with a do...while loop to return all the matches:  </h6>
+            <span class="text-success"> // The global case</span>
+        
+            let message = 'Hi, are you there? hi, HI...';
+            let re = /hi/gi;
+            
+            let matches = [];
+            let match;
+            
+            do {
+                match = re.exec(message);
+                if (match) {
+                    matches.push(match);
+                }
+            } while (match != null);
+            
+            console.log(matches);
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+            ...
+        </pre>
+
+        <div class="alert alert-secondary">
+            How it works: 
+            <ul>
+                <li>
+                    First, declare a <span class="text-danger">message</span> string that will be used for searching.
+                </li>
+                <li>
+                    Then, create a regular expression object with the pattern <span class="text-danger">/hi/gi</span>. The ignore flag (<span class="text-danger">i</span>) allows <span class="text-danger">re</span> object to ignore cases when executing the search and global flag (<span class="text-danger">g</span>) instructs the <span class="text-danger">re</span> object to find all matches, not just the first one.
+                </li>
+                <li>
+                    Third, execute the <span class="text-danger">exec()</span> method until no match found.
+                </li>
+                <li>Finally, show the result array in the console.</li>
+            </ul>
+        </div>
+
+
+        <div>
+            <h5>
+                Seaching Strings
+            </h5>
+            <p>
+                The method <span class="text-danger">str.match(regexp)</span> returns all matches of <span class="text-danger">regexp</span> in the string str.
+            </p>
+            <pre class="bg-dark text-white">
+                <h6 class="text-success ms-3 fw-bold">The following example shows how to use the match() method:  </h6>
+                <span class="text-success">// Searching the String</span>
+                let str = "Are you OK? Yes, I am OK";
+                let result = str.match(/OK/gi);
+
+                console.log(result);
+
+                <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+                (2) [OK, OK]
+            </pre>
+        </div>
+        <div>
+            <h5>
+                Replacing Strings
+            </h5>
+            <p>
+                The following example uses the <span class="text-danger">str.replace("text", "text2")</span> method to replace the first occurrence of the string <span class="text-danger">'ok'</span> in the string str.
+            </p>
+            <pre class="bg-dark text-white">
+                <h6 class="text-success ms-3 fw-bold">The following example shows how to use the match() method:  </h6>
+                <span class="text-success">// Repalcing the String</span>
+                
+                let str = "Are you OK? Yes, I'm OK.";
+                let result = str.replace('OK', 'fine');
+                
+                console.log(result);
+
+                <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+                Are you fine? Yes, I'm OK.
+            </pre>
+            
+            <p>To replace all occurrences of <span class="text-danger">OK</span>, you use a regular expression with the global flag (<span class="text-danger">g</span>).</p>
+            <pre class="bg-dark text-white">
+                <h6 class="text-success ms-3 fw-bold">  </h6>
+                <span class="text-success">//repalceing the String from all the occurences</span>
+                let str = 'Are you OK? Yes, I am OK.';
+                let result = str.replace(/OK/g, 'fine');
+
+                console.log(result);
+                <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+                Are you fine? Yes, I'm fine.
+            </pre>
+            <p>The following example uses both ignore and global flags to replace all occurrences of OK regardless of cases with the string fine:</p>
+            <pre class="bg-dark text-white">
+                <h6 class="text-success ms-3 fw-bold">  </h6>
+                <span class="text-success">//repalceing the String from all the occurences with case insensitive</span>
+                let str = "Are you Ok? Yes, I'm OK.";
+                let result = str.replace(/OK/gi,'fine');
+
+                console.log(result);
+                <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+                Are you fine? Yes, I'm fine.
+            </pre>
+        </div>
+
+        <h2 class="text-center" style="margin-top: 60px;">Character Classes</h2>
+        <h4>Introduction to the character class</h4>
+        <p>
+            A character class allows you to match any symbol from a certain character set. A character class is also called a character set. Suppose that you have a phone number like this:
+        </p>
+
+        <div class="alert alert-secondary">
+            <span class="text-success">+1-(408)-555-0105</span>
+        </div>
+
+        <p>And you want to turn it into a plain number.</p>
+        <div class="alert alert-secondary">
+            <span class="text-success">14085550105</span>
+        </div>
+
+        <p>Character classes in regular expressions can help you to do this.</p>
+        <h6>Digit character</h6>
+        <p>Let’s explore the digit character class first. The digit character class is denoted by <span class="text-danger">\d</span> which matches any single digit:</p>
+        <div class="alert alert-secondary">
+            \d
+        </div>
+        <p>
+            The following example uses the \d to match the first number in the phone number:
+        </p>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            <span class="text-success">// digit character</span>
+            let phone = '+1-(408)-555-0105';
+            let re = /\d/;
+            console.log(phone.match(re));
+            
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+                1
+        </pre>
+        
+
+        <p>When you add the global flag (<span class="text-danger">g</span>), the regular expression will search for all numbers, not the first one</p>
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            <span class="text-success">//Using global flag</span>
+            
+            let phone = '+1-(408)-555-0105';
+            let re = /\d/g;
+
+            console.log(phone.match(re));
+            
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+                (11) ['1','4','0','8','5','5','5','0','1','0','5']
+        </pre>
+
+        <p>
+            Now, you can turn the phone number into a plain number as follows: 
+            <ul>
+                <li>Use the <span class="text-danger">match()</span> method to return an array containing numbers.</li>
+                <li>Use the <span class="text-warning">join()</span> method to concatenate elements of the array into a string.</li>
+            </ul>
+        </p>
+
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            <span class="text-success">//Using Join()</span>
+            
+            let phone = '+1-(408)-555-0105';
+            let re = /\d/g;
+            let numbers = phone.match(re);
+            let phoneNo = numbers.join('');
+            
+            console.log(phoneNo);
+            
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+                14085550105
+        </pre>
+
+        <div class="alert alert-danger">
+            To make it short, you can chain the <span class="text-danger">match()</span> and <span class="text-warning">join()</span> methods like this:
+            
+            <div class="alert alert-secondary">
+                console.log('+1-(408)-555-0115'.match(/\d/g).join(''));
+            </div>
+        </div>
+        <p>
+            Besides the digit character class (<span class="text-danger">\d</span>), regular exprssions support other character classes.
+        </p>
+        <p>
+            The most commonly used character classes are: 
+            <ul>
+                <li>
+                    <span class="text-danger">\d</span> - match a single digit or a character from 0 to 9.
+                </li>
+                <li>
+                    <span class="text-danger">\s</span> - match a single whitespace symbol such a space, a tab (\t), a newline (\n)
+                </li>
+                <li>
+                    <span class="text-danger">\w</span> - <span class="text-danger">w</span> stands for word character. It matches the ASCII character <span class="text-danger">[A-Za-z0-9]</span> including latin alphabets, digits, and the underscore (<span class="text-danger">_</span>)
+                </li>
+            </ul>
+        </p>
+
+        <h5>Space character : (<span class="text-danger">\s</span>)</h5>
+        <p>
+            The \s metacharacter matches whitespace character.
+
+            Whitespace characters can be:
+            <ul>
+                <li>A space character</li>
+                <li>A tab character</li>
+                <li>A carriage return character</li>
+                <li>A new line character</li>
+                <li>A vertical tab character</li>
+                <li>A form feed character</li>
+            </li>
+        </p>
+        
+        <pre class="bg-dark text-white">
+            <h6 class="text-success ms-3 fw-bold">Example: </h6>
+            <span class="text-success">//Using Join()</span>
+            
+            let phone = '+1-(408)-555-0105';
+            let re = /\d/g;
+            let numbers = phone.match(re);
+            let phoneNo = numbers.join('');
+            
+            console.log(phoneNo);
+            
+            <h6 class="text-danger ms-3 fw-bold">Output:</h6>
+                14085550105
+        </pre>
+    </div>
+
+    
     <!-- ----------------------------------Footer-------------------------------------------- -->
 
     <div class="container-fluid bg-dark text-light text-center">
